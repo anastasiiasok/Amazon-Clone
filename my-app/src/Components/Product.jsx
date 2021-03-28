@@ -4,9 +4,7 @@ import styled from "styled-components";
 const Product = ({ product }) => {
   return (
     <Container>
-      <Title>
-        <strong> {product.title} </strong>
-      </Title>
+      <Title>{product.title}</Title>
       <PriceContainer>
         <Price>Price: {product.salePrice}</Price>
       </PriceContainer>
@@ -58,9 +56,11 @@ const PriceContainer = styled.div`
 const RatingContainer = styled.div`
   display: flex;
 `;
-const Title = styled.span``;
+const Title = styled.span`
+  font-weight: 650;
+`;
 const Price = styled.span`
-  font-weight: 500;
+  font-weight: 600;
   margin-top: 3px;
 `;
 const SalesPrice = styled.span`
