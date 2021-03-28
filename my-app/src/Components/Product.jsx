@@ -1,38 +1,70 @@
 import React from "react";
 import styled from "styled-components";
-
-function Product() {
+import CheckIcon from "@material-ui/icons/Check";
+import ThumbUpIcon from "@material-ui/icons/ThumbUp";
+const Product = ({ product }) => {
   return (
     <Container>
-      <Title>
-        <strong>One Hand Gaming Keyboard and Mouse Combo, 39 Keys </strong>
-      </Title>
-
-      <Rating>⭐⭐⭐⭐⭐</Rating>
-      <Price>$22.99</Price>
-      <Image src="product1.png" />
+      <Title>{product.title}</Title>
+      <PriceContainer>
+        <Price>Price: {product.salePrice}</Price>
+      </PriceContainer>
+      <image src={product.image} />
+      <RatingContainer>
+        <Rating>
+          {" "}
+          Ratings: ⭐⭐⭐⭐⭐ <br /> {product.ratings}
+        </Rating>
+      </RatingContainer>
+      <Image src={product.image} />
+      <ProductDetailsContainer>Brand: {product.brand} </ProductDetailsContainer>
       <ActionSection>
         <AddToCartButton>Add to Cart</AddToCartButton>
       </ActionSection>
     </Container>
   );
-}
+};
+// function Product() {
+//   return (
+
+// <Container>
+//   <Title>
+//     <strong>One Hand Gaming Keyboard and Mouse Combo, 39 Keys </strong>
+//   </Title>
+
+//   <Rating>⭐⭐⭐⭐⭐</Rating>
+//   <Price>$22.99</Price>
+//   <Image src="product1.png" />
+
+// </Container>
+//   );
+// }
 
 export default Product;
 
 const Container = styled.div`
   background-color: white;
-  flex: 100px;
+  flex: 1;
   padding: 20px;
   margin: 10px;
-  margin-left: 550px;
-  max-height: 400px;
+  display: flex;
+  z-index: 100;
   width: 250px;
   flex-direction: column;
 `;
-
+const PriceContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+const RatingContainer = styled.div`
+  display: flex;
+`;
 const Title = styled.span``;
 const Price = styled.span`
+  font-weight: 500;
+  margin-top: 3px;
+`;
+const SalesPrice = styled.span`
   font-weight: 500;
   margin-top: 3px;
 `;
@@ -41,7 +73,9 @@ const Image = styled.img`
   max-height: 200px;
   object-fit: contain;
 `;
-
+const ProductDetailsContainer = styled.div`
+  display: flex;
+`;
 const ActionSection = styled.div`
   margin-top: 12px;
   display: grid;

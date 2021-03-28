@@ -2,14 +2,16 @@ import React from "react";
 import "./Home.css";
 import Product from "./Product";
 import styled from "styled-components";
-
+import { Products } from "../Components/Data/Products";
 function Home() {
   return (
     <Container>
       <Banner></Banner>
-      <Content></Content>
-
-      <Product />
+      <Content>
+        {Products.map((product, index) => {
+          return <Product key={index} product={product} />;
+        })}
+      </Content>
     </Container>
   );
 }
