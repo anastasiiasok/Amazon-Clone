@@ -10,7 +10,6 @@ export const Products = [
     price: "$12.99",
     salePrice: "$ 12.00",
     isPrime: true,
-    displaySize: "Chest 14.75-15.35",
     brand: "PUPTECK",
   },
   {
@@ -22,7 +21,6 @@ export const Products = [
     salePrice: "$ 23.99",
     isPrime: false,
     numberofButtons: "35",
-    connectivity: "Wi-Fi, Bluetooth",
     brand: "EQEOVGA",
   },
 ];
