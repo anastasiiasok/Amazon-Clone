@@ -1,20 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-import CheckIcon from "@material-ui/icons/Check";
 
 const Product = ({ product }) => {
   return (
     <Container>
-      <Title>{product.title}</Title>
+      <Title>
+        <strong> {product.title} </strong>
+      </Title>
       <PriceContainer>
         <Price>Price: {product.salePrice}</Price>
       </PriceContainer>
       <image src={product.image} />
       <RatingContainer>
-        <Rating> Ratings: ⭐⭐⭐⭐⭐ {product.ratings}</Rating>
+        <Rating>Ratings: {product.ratings} ⭐⭐⭐</Rating>
       </RatingContainer>
-      <Image src={product.image} />
       <ProductDetailsContainer>Brand: {product.brand} </ProductDetailsContainer>
+      <Image src={product.image} />
+
       <ActionSection>
         <AddToCartButton>Add to Cart</AddToCartButton>
       </ActionSection>
