@@ -11,5 +11,5 @@ Part 3 : Created DataBase with products and images.
 Part 4 : Passed products as props to a .map on my data arrays to products , then I deconstructed product from my component function and included every detail into the products components.
 
 <p align="center">
-  <img width="700" height="400" src="read.me.png">
+  <img width="700" height="400" src="https://github.com/anastasiiasok/Amazon-Clone/blob/main/my-app/public/read.me.png">
 </p>
