@@ -5,6 +5,7 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
+import CartIcon from "../Assets/Images/Cart.svg";
 
 function Header() {
   return (
@@ -81,8 +82,11 @@ function Header() {
 
         <HeaderOptionCart>
           <Link to="/cart">
-            <ShoppingBasketIcon />
+            <CartIconContainer src={CartIcon} />
+
             <CartCount>4</CartCount>
+
+            <CartTitle>Cart</CartTitle>
           </Link>
         </HeaderOptionCart>
       </HeaderNavItems>
@@ -171,5 +175,26 @@ const HeaderOptionCart = styled.div`
 `;
 
 const CartCount = styled.div`
-  padding-left: 4px;
+  top: 20%;
+  left: 32%;
+  font-weight: 700;
+  color: #febd69;
+  margin-top: -30px;
+  margin-left: -24px;
+  margin-bottom: -18px;
+`;
+const CartCount1 = styled.div`
+  position: absolute;
+  top: 20%;
+  left: 26%;
+  font-weight: 700;
+  color: #febd69;
+`;
+const CartTitle = styled.div`
+  padding-left: 20px;
+  font-weight: 700;
+  margin-top: 20px;
+`;
+const CartIconContainer = styled.img`
+  height: 35px;
 `;

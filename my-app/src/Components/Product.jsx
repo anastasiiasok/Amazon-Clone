@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import CheckIcon from "@material-ui/icons/Check";
-import ThumbUpIcon from "@material-ui/icons/ThumbUp";
+
 const Product = ({ product }) => {
   return (
     <Container>
@@ -11,10 +11,7 @@ const Product = ({ product }) => {
       </PriceContainer>
       <image src={product.image} />
       <RatingContainer>
-        <Rating>
-          {" "}
-          Ratings: ⭐⭐⭐⭐⭐ <br /> {product.ratings}
-        </Rating>
+        <Rating> Ratings: ⭐⭐⭐⭐⭐ {product.ratings}</Rating>
       </RatingContainer>
       <Image src={product.image} />
       <ProductDetailsContainer>Brand: {product.brand} </ProductDetailsContainer>
