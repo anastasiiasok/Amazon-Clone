@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { Products } from "../Components/Data/Products";
 import Grid from "@material-ui/core/Grid";
 import { db } from "../firebase";
+import HomeSlider from "./Homeslider";
 function Home() {
   const [products, setProducts] = useState([]);
 
@@ -26,7 +27,9 @@ function Home() {
 
   return (
     <Container>
-      <Banner></Banner>
+      <Banner>
+        <HomeSlider />
+      </Banner>
       <Content>
         <Grid container spacing={3}>
           {products.map((data, index) => {
@@ -56,7 +59,7 @@ const Container = styled.div`
 `;
 
 const Banner = styled.div`
-  background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/kindle/journeys/NDRiMzY4NTIt/NDRiMzY4NTIt-YTI0MDc5OWMt-w1500._CB659183649_.jpg");
+  // background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/kindle/journeys/NDRiMzY4NTIt//// NDRiMzY4NTIt-YTI0MDc5OWMt-w1500._CB659183649_.jpg");
   min-height: 600px;
   background-position: center;
   background-size: cover;
