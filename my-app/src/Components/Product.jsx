@@ -6,7 +6,7 @@ const Product = ({ product }) => {
     <Container>
       <Title>{product.title}</Title>
       <PriceContainer>
-        <Price>Price: {product.salePrice}</Price>
+        <Price>Price: ${product.price}</Price>
       </PriceContainer>
       <image src={product.image} />
       <RatingContainer>
