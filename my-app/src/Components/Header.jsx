@@ -81,7 +81,7 @@ function Header() {
         </HeaderOption>
 
         <HeaderOptionCart>
-          <Link to="/cart">
+          <Link to="/checkout">
             <CartIconContainer src={CartIcon} />
 
             <CartCount>4</CartCount>

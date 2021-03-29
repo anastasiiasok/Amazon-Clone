@@ -3,6 +3,7 @@ import "./Home.css";
 import Product from "./Product";
 import styled from "styled-components";
 import { Products } from "../Components/Data/Products";
+import { db } from "../firebase";
 function Home() {
   return (
     <Container>
