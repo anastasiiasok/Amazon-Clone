@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-
+import CartItems from "./CartItems";
+import CartTotal from "./CartTotal";
 function Cart() {
   return (
     <Container>
-      <p> Checkout</p>
+      <CartItems />
+      <CartTotal />
     </Container>
   );
 }
