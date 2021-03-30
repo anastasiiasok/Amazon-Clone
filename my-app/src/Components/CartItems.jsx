@@ -14,7 +14,7 @@ function CartItems() {
               Important messages about items in you Cart:
             </ImportantMessage>
             <ImportantTitle>
-              1 item in your Cart has changed price.
+              Items in your Cart has changed price.
             </ImportantTitle>
             <ImportantDescription>
               Items in your Shopping Cart will always reflect the most recent
