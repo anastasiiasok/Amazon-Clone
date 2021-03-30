@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./Home.css";
 import Product from "./Product";
 import styled from "styled-components";
-import { Products } from "../Components/Data/Products";
 import Grid from "@material-ui/core/Grid";
 import { db } from "../firebase";
 import HomeSlider from "./Homeslider";

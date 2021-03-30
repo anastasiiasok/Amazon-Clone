@@ -1,26 +1,25 @@
 import React from "react";
 import styled from "styled-components";
 
-const Product = ({ product }) => {
+function Product({ product }) {
   return (
     <Container>
       <Title>{product.title}</Title>
       <PriceContainer>
         <Price>Price: ${product.price}</Price>
       </PriceContainer>
-      <image src={product.image} />
+
       <RatingContainer>
-        <Rating>Ratings: {product.ratings} ⭐⭐⭐</Rating>
+        <Rating>Ratings: {product.ratings} ⭐⭐⭐⭐⭐</Rating>
       </RatingContainer>
       <ProductDetailsContainer>Brand: {product.brand} </ProductDetailsContainer>
       <Image src={product.image} />
-
       <ActionSection>
         <AddToCartButton>Add to Cart</AddToCartButton>
       </ActionSection>
     </Container>
   );
-};
+}
 // function Product() {
 //   return (
 
