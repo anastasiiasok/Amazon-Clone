@@ -18,7 +18,7 @@ Part 5: Installed Firebase and created a collection with product fields.
 created firebase.js and entered information from config (imported firebase from "firebase", initializedApp and created db and exported).
 When I go ahead and pull data from firebase , what's going to happen is I'm going to save that in a state and it's a snapshot and time of the actual application. So app will have a state of products.
 <p align="center">
-  <img width="500" height="200" src="https://github.com/anastasiiasok/Amazon-Clone/blob/main/my-app/public/screen.png">
+  <img width="700" height="350" src="https://github.com/anastasiiasok/Amazon-Clone/blob/main/my-app/public/screen.png">
 </p>
 What's going to happen is these products are going to go into a database of the app itself.
 If I have it in the state , using that state I can actually go ahead and show it on the actual web page.
