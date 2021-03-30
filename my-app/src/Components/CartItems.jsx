@@ -114,5 +114,3 @@ const RedPrice = styled.div`
   margin-left: 3px;
   color: red;
 `;
-
-const EmptyCartContainer = styled.div``;
