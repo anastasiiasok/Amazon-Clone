@@ -5,6 +5,8 @@ import styled from "styled-components";
 import Grid from "@material-ui/core/Grid";
 import { db } from "../firebase";
 import HomeSlider from "./Homeslider";
+import Categories from "./Categories";
+
 function Home() {
   const [products, setProducts] = useState([]);
 
@@ -29,7 +31,9 @@ function Home() {
       <Banner>
         <HomeSlider />
       </Banner>
+
       <Content>
+        <Categories />
         <Grid container spacing={3}>
           {products.map((data, index) => {
             return (
