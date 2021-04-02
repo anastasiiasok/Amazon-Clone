@@ -30,7 +30,7 @@ Part 7 : I needed to devide CartItem component into rows and colomuns, so for th
 It has 2 horizontal and 1 a vertical component.
 
 <p align="center">
-  <img width="200" height="120" src="https://github.com/anastasiiasok/Amazon-Clone/blob/main/my-app/public/part6.png">
+  <img width="400" height="220" src="https://github.com/anastasiiasok/Amazon-Clone/blob/main/my-app/public/part6.png">
 </p>
 
 
