@@ -35,4 +35,11 @@ It has 2 horizontal and 1 a vertical component.
 </p>
 
 
+Part 8 : Created cartItems in my database with filled out fields(image, title, price and quantity).
+Created a state and passed the prop from app down to Cart and down to CartItems. That now is whoing us the actual cart. Passes items to cartItem component.
+
+<p align="center">
+  <img width="350" height="220" src="https://github.com/anastasiiasok/Amazon-Clone/blob/main/my-app/public/screen7.png">
+</p>
+
 
