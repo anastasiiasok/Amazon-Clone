@@ -1,17 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import CheckIcon from "@material-ui/icons/Check";
-function CartItem({}) {
+function CartItem({ id, item }) {
   return (
     <div>
       <Container>
         <ImageContainer>
-          <img src="./product1.png" />
+          <img src={item.image} />
         </ImageContainer>
 
         <CartItemInfo>
           <CartItemInfoTop>
-            <h2>item.name</h2>
+            <h2>{item.title}</h2>
             <DetailsContainer>
               <div>In Stock</div>
               <PrimeContainer>
@@ -34,7 +34,7 @@ function CartItem({}) {
           </CartItemInfoTop>
           <CartItemInfoBottom>
             <CartItemQuantityContainer>
-              <select></select>
+              {item.quantity}
             </CartItemQuantityContainer>
             <CartItemDeleteContainer>Delete</CartItemDeleteContainer>
           </CartItemInfoBottom>
@@ -44,7 +44,7 @@ function CartItem({}) {
           <PriceContainer>
             <Price></Price>
 
-            <SalePrice>$24.99</SalePrice>
+            <SalePrice>$ {item.price}</SalePrice>
           </PriceContainer>
           <PrimeShippingContainer>
             Free Delivery<PrimeShippingDate></PrimeShippingDate>

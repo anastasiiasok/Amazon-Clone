@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import WarningIcon from "@material-ui/icons/Warning";
 import CartItem from "./CartItem";
-function CartItems() {
+function CartItems({ cartItems }) {
   return (
     <div>
       <Container>
@@ -38,10 +38,9 @@ function CartItems() {
         <CartContainer>
           <Title>Shopping Cart</Title>
           <ItemsContainer>
-            <div>
-              <hr />
-              <CartItem />
-            </div>
+            {cartItems.map((item) => (
+              <CartItem id={item.id} item={item.product} />
+            ))}
 
             <EmptyCartContainer>
               <div>
