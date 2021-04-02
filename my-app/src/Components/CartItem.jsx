@@ -5,7 +5,9 @@ function CartItem({}) {
   return (
     <div>
       <Container>
-        <ImageContainer>IMAGE</ImageContainer>
+        <ImageContainer>
+          <img src="./product1.png" />
+        </ImageContainer>
 
         <CartItemInfo>
           <CartItemInfoTop>
@@ -28,7 +30,6 @@ function CartItem({}) {
               <ProductDetailsContainer>
                 <ProductDetails>details description</ProductDetails>
               </ProductDetailsContainer>
-              );
             </DetailsContainer>
           </CartItemInfoTop>
           <CartItemInfoBottom>
@@ -43,7 +44,7 @@ function CartItem({}) {
           <PriceContainer>
             <Price></Price>
 
-            <SalePrice></SalePrice>
+            <SalePrice>$24.99</SalePrice>
           </PriceContainer>
           <PrimeShippingContainer>
             Free Delivery<PrimeShippingDate></PrimeShippingDate>

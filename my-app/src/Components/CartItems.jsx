@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import WarningIcon from "@material-ui/icons/Warning";
+import CartItem from "./CartItem";
 function CartItems() {
   return (
     <div>
@@ -34,6 +35,27 @@ function CartItems() {
             </ul>
           </ImportantDetails>
         </MessageContainer>
+        <CartContainer>
+          <Title>Shopping Cart</Title>
+          <ItemsContainer>
+            <div>
+              <hr />
+              <CartItem />
+            </div>
+
+            <EmptyCartContainer>
+              <div>
+                Your Shopping Cart lives to serve. Give it purpose — fill it
+                with groceries, clothing, household supplies, electronics, and
+                more.
+              </div>
+              <div>
+                Continue shopping on the Amazon.com homepage, learn about
+                today's deals, or visit your Wish List.
+              </div>
+            </EmptyCartContainer>
+          </ItemsContainer>
+        </CartContainer>
       </Container>
     </div>
   );
@@ -114,3 +136,4 @@ const RedPrice = styled.div`
   margin-left: 3px;
   color: red;
 `;
+const EmptyCartContainer = styled.div``;

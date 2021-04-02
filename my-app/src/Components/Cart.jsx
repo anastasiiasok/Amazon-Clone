@@ -8,7 +8,6 @@ function Cart() {
     <Container>
       <CartItems />
       <CartTotal />
-      <CartItem />
     </Container>
   );
 }
