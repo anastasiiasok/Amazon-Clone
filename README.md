@@ -24,6 +24,7 @@ What's going to happen is these products are going to go into a database of the 
 If I have it in the state , using that state I can actually go ahead and show it on the actual web page.
 This is a flow: we get it from DB, say it to the state from the state show it on the web page. When we add New products , everytime you out to the state. So, React updates automatically. Also installed react-slick and slick-carousel to make Home slider for home page.
 
+
 Part 6: Created and designed Footer & Categories component.
 
 Part 7 : I needed to devide CartItem component into rows and colomuns, so for that I created following componenents (ImageContainer,CartItemInfo,CartItemInfoTop,DetailsContainer,PrimeContainer, Prime,GiftContainer,Checkbox,ProductDetailsContainer,ProductDetails,CartItemInfoBottom,CartItemQuantityContainer,CartItemDeleteContainer,CartItemPrice,PriceContainer,PrimeShippingContainer).
