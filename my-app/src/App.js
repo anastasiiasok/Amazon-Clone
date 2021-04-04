@@ -33,7 +33,7 @@ function App() {
       <header className="App-header"></header>
       <Router>
         <div className="app">
-          <Header />
+          <Header cartItems={cartItems} />
 
           <Switch>
             <Route path="/checkout">

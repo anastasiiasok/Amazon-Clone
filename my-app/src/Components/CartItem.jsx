@@ -1,7 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 import CheckIcon from "@material-ui/icons/Check";
+import { db } from "../firebase";
 function CartItem({ id, item }) {
+  let options = [];
+
+  for (let i = 1; i < Math.max(item.quantity + 1, 20); i++) {
+    options.push(<option value={i}> Qty: {i}</option>);
+  }
+
+  const changeQuantity = (newQuantity) => {
+    db.collection("cartItems")
+      .doc(id)
+      .update({
+        quantity: parseInt(newQuantity),
+      });
+  };
+
   return (
     <div>
       <Container>
@@ -34,7 +49,12 @@ function CartItem({ id, item }) {
           </CartItemInfoTop>
           <CartItemInfoBottom>
             <CartItemQuantityContainer>
-              {item.quantity}
+              <select
+                value={item.quantity}
+                onChange={(e) => changeQuantity(e.target.value)}
+              >
+                {options}
+              </select>
             </CartItemQuantityContainer>
             <CartItemDeleteContainer>Delete</CartItemDeleteContainer>
           </CartItemInfoBottom>

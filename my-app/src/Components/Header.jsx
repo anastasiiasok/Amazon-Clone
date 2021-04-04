@@ -7,45 +7,19 @@ import styled from "styled-components";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import CartIcon from "../Assets/Images/Cart.svg";
 
-function Header() {
+function Header({ cartItems }) {
+  const getCount = () => {
+    let count = 0;
+    // Loop through all cart items
+    cartItems.forEach((item) => {
+      // add the quantity of the cart item to total;
+      count += item.product.quantity;
+    });
+
+    return count;
+  };
+
   return (
-    // <div className="header">
-    //   <Link to="/">
-    //     <img
-    //       className="header__logo"
-    //       src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
-    //     />
-    //   </Link>
-
-    //   <div className="header__search">
-    //     <input className="header__searchInput" type="text" />
-    //     <SearchIcon className="header__searchIcon" />
-    //   </div>
-
-    //   <div className="header__nav">
-    //     <div className="header__option">
-    //       <span className="header__optionLineOne">Hello Guest</span>
-    //       <span className="header__optionLineTwo">Sign In</span>
-    //     </div>
-
-    //     <div className="header__option">
-    //       <span className="header__optionLineOne">Returns</span>
-    //       <span className="header__optionLineTwo">& Orders</span>
-    //     </div>
-
-    //     <div className="header__option">
-    //       <span className="header__optionLineOne">Your</span>
-    //       <span className="header__optionLineTwo">Prime</span>
-    //     </div>
-
-    //     <Link to="/checkout">
-    //       <div className="header__optionBasket">
-    //         <ShoppingBasketIcon />
-    //       </div>
-    //     </Link>
-    //   </div>
-    // </div>
-
     <Container>
       <HeaderLogo>
         <Link to="/">
@@ -84,7 +58,7 @@ function Header() {
           <Link to="/checkout">
             <CartIconContainer src={CartIcon} />
 
-            <CartCount>4</CartCount>
+            <CartCount>{getCount()}</CartCount>
 
             <CartTitle>Cart</CartTitle>
           </Link>
