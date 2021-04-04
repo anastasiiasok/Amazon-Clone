@@ -4,10 +4,18 @@ import CartItems from "./CartItems";
 import CartTotal from "./CartTotal";
 import CartItem from "./CartItem";
 function Cart({ cartItems }) {
+  const getTotalPrice = () => {
+    let total = 0;
+    cartItems.forEach((item) => {
+      total += item.product.price * item.product.quantity;
+    });
+    return total;
+  };
+
   return (
     <Container>
       <CartItems cartItems={cartItems} />
-      <CartTotal />
+      <CartTotal getTotalPrice={getTotalPrice()} />
     </Container>
   );
 }

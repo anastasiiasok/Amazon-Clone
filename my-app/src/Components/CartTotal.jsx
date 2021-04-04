@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-function CartTotal() {
+function CartTotal({ getTotalPrice }) {
   return (
     <div>
       <Container>
         <TotalContainer>
-          <Title>Subtotal $</Title>
+          <Title>Subtotal $ {getTotalPrice}</Title>
+
           <PriceContainer></PriceContainer>
         </TotalContainer>
         <GiftContainer>

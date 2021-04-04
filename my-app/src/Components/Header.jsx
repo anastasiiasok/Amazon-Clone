@@ -154,16 +154,10 @@ const CartCount = styled.div`
   font-weight: 700;
   color: #febd69;
   margin-top: -30px;
-  margin-left: -24px;
+  margin-left: -30px;
   margin-bottom: -18px;
 `;
-const CartCount1 = styled.div`
-  position: absolute;
-  top: 20%;
-  left: 26%;
-  font-weight: 700;
-  color: #febd69;
-`;
+
 const CartTitle = styled.div`
   padding-left: 20px;
   font-weight: 700;
