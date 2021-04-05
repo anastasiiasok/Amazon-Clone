@@ -8,6 +8,7 @@ import Footer from "./Components/Footer";
 
 import { useState, useEffect } from "react";
 import { db } from "./firebase";
+import Bookmarks from "./Components/Bookmarks";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -38,6 +39,9 @@ function App() {
           <Switch>
             <Route path="/checkout">
               <Cart cartItems={cartItems} />
+            </Route>
+            <Route path="/bookmarks">
+              <Bookmarks Bookmarks={Bookmarks} />
             </Route>
             <Route path="/">
               <Home />

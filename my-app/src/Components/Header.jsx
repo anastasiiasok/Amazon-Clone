@@ -1,11 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 import "./Header.css";
 import SearchIcon from "@material-ui/icons/Search";
-import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import CartIcon from "../Assets/Images/Cart.svg";
+import BookmarksIcon from "@material-ui/icons/Bookmarks";
 
 function Header({ cartItems }) {
   const getCount = () => {
@@ -34,7 +34,6 @@ function Header({ cartItems }) {
           <OptionLineTwo>Select Your Address</OptionLineTwo>
         </HeaderOption>
       </HeaderOptionAddress>
-
       <HeaderSearch>
         <HeaderSearchInput type="text" />
 
@@ -42,15 +41,22 @@ function Header({ cartItems }) {
           <SearchIcon />
         </HeaderSearchIconContainer>
       </HeaderSearch>
-
       <HeaderNavItems>
         <HeaderOption>
           <OptionLineOne>Hello, Anastasia</OptionLineOne>
+
           <OptionLineTwo>Account & Lists</OptionLineTwo>
         </HeaderOption>
+        <OptionLineOne>
+          {" "}
+          <Link to="/bookmarks">
+            <BookmarksIcon fontSize="large" />
+          </Link>{" "}
+        </OptionLineOne>
 
         <HeaderOption>
           <OptionLineOne>Returns</OptionLineOne>
+
           <OptionLineTwo>& Orders</OptionLineTwo>
         </HeaderOption>
 
@@ -92,7 +98,10 @@ const HeaderOptionAddress = styled.div`
   align-items: center;
 `;
 
-const OptionLineOne = styled.div``;
+const OptionLineOne = styled.div`
+  display: flex;
+  align-items: center;
+`;
 
 const OptionLineTwo = styled.div`
   font-weight: 700;

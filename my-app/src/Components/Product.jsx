@@ -36,7 +36,7 @@ function Product({ product, id }) {
       <ProductDetailsContainer>Brand: {product.brand} </ProductDetailsContainer>
       <Image src={product.image} />
       <ActionSection>
-        <AddToCartButton onClick={addToCart}>Add to Cart</AddToCartButton>
+        <Button onClick={addToCart}>Add to Cart</Button>
       </ActionSection>
     </Container>
   );
@@ -92,4 +92,21 @@ const AddToCartButton = styled.button`
   background-color: #f0c14b;
   border: 2px solid #a88734;
   border-radius: 2px;
+`;
+const Button = styled.button`
+  width: 100px;
+  height: 30px;
+
+  box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+  background: #ffd814;
+  background-color: #fcd200;
+
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  :hover {
+    background: #f7ca00;
+    border-color: #f2c200;
+    box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+  }
 `;
