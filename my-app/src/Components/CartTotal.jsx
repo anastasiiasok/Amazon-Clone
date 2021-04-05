@@ -7,13 +7,15 @@ function CartTotal({ getTotalPrice, getCount }) {
       <Container>
         <TotalContainer>
           <PriceContainer>
-            <Title>Subtotal ({getCount} items):</Title>
-            <NumberFormat
-              value={getTotalPrice}
-              displayType={"text"}
-              thousandSeparator={true}
-              prefix={"$"}
-            />
+            <Title>
+              Subtotal ({getCount} items):{" "}
+              <NumberFormat
+                value={getTotalPrice}
+                displayType={"text"}
+                thousandSeparator={true}
+                prefix={"$"}
+              />
+            </Title>
           </PriceContainer>
         </TotalContainer>
         <GiftContainer>
