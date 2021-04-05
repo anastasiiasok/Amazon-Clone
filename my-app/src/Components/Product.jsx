@@ -1,7 +1,28 @@
-import React from "react";
+// import React from 'react'
 import styled from "styled-components";
+import { db } from "../firebase";
 
-function Product({ product }) {
+function Product({ product, id }) {
+  const addToCart = () => {
+    console.log(id);
+    const cartItem = db.collection("cartItems").doc(id);
+    cartItem.get().then((doc) => {
+      console.log(doc);
+      if (doc.exists) {
+        cartItem.update({
+          quantity: doc.data().quantity + 1,
+        });
+      } else {
+        db.collection("cartItems").doc(id).set({
+          name: product.title,
+          image: product.image,
+          price: product.price,
+          quantity: 1,
+        });
+      }
+    });
+  };
+
   return (
     <Container>
       <Title>{product.title}</Title>
@@ -15,26 +36,11 @@ function Product({ product }) {
       <ProductDetailsContainer>Brand: {product.brand} </ProductDetailsContainer>
       <Image src={product.image} />
       <ActionSection>
-        <AddToCartButton>Add to Cart</AddToCartButton>
+        <AddToCartButton onClick={addToCart}>Add to Cart</AddToCartButton>
       </ActionSection>
     </Container>
   );
 }
-// function Product() {
-//   return (
-
-// <Container>
-//   <Title>
-//     <strong>One Hand Gaming Keyboard and Mouse Combo, 39 Keys </strong>
-//   </Title>
-
-//   <Rating>⭐⭐⭐⭐⭐</Rating>
-//   <Price>$22.99</Price>
-//   <Image src="product1.png" />
-
-// </Container>
-//   );
-// }
 
 export default Product;
 
