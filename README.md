@@ -50,4 +50,20 @@ Created a state and passed the prop from app down to Cart and down to CartItems.
   <img width="350" height="220" src="https://github.com/anastasiiasok/Amazon-Clone/blob/main/my-app/public/screen7.png">
 </p>
 
+### Part 9:
+
+Getting total price for all added products in cart.
+Getting total quantity of added items to cart, installed library (react-number-format)
+
+<p align="center">
+  <img width="350" height="220" src="https://github.com/anastasiiasok/Amazon-Clone/blob/main/my-app/public/part9.png">
+</p>
+
+<br>
+
+<p align="center">
+  <img width="350" height="220" src="https://github.com/anastasiiasok/Amazon-Clone/blob/main/my-app/public/part9cart.png">
+</p>
+
+
 
