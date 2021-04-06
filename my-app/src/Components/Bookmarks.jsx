@@ -6,10 +6,7 @@ function Bookmarks({ product, id }) {
   return (
     <>
       <Container>
-        <p>
-          Add your favorite items to Bookmarks, and check them out anytime you
-          wish
-        </p>
+        <p>Your favorite items check them out anytime you wish</p>
         <Link to="/">
           <Button path="/">Back to shopping</Button>
         </Link>

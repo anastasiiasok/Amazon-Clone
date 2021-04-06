@@ -9,6 +9,7 @@ import Footer from "./Components/Footer";
 import { useState, useEffect } from "react";
 import { db } from "./firebase";
 import Bookmarks from "./Components/Bookmarks";
+import Login from "./Components/Login";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -37,11 +38,14 @@ function App() {
           <Header cartItems={cartItems} />
 
           <Switch>
+            <Route path="/login">
+              <Login />
+            </Route>
             <Route path="/checkout">
               <Cart cartItems={cartItems} />
             </Route>
             <Route path="/bookmarks">
-              <Bookmarks Bookmarks={Bookmarks} />
+              <Bookmarks />
             </Route>
             <Route path="/">
               <Home />

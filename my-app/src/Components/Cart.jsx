@@ -9,6 +9,7 @@ function Cart({ cartItems }) {
     cartItems.forEach((item) => {
       total += item.product.price * item.product.quantity;
     });
+
     return total;
   };
 
