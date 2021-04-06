@@ -1,12 +1,30 @@
 import React from "react";
 import styled from "styled-components";
-function Login() {
+import { auth, provider } from "../firebase";
+function Login({ setUser }) {
+  const signIn = () => {
+    auth
+      .signInWithPopup(provider)
+      .then((result) => {
+        let user = result.user;
+        let newUser = {
+          name: user.displayName,
+          email: user.email,
+          photo: user.photoURL,
+        };
+        localStorage.setItem("user", JSON.stringify(newUser));
+        setUser(newUser);
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
   return (
     <Container>
       <Content>
         <AmazonLogo src="http://media.corporate-ir.net/media_files/IROL/17/176060/Oct18/Amazon%20logo.PNG" />
         <h1>Sign into Amazon</h1>
-        <LoginButton>Sign in with Google</LoginButton>
+        <LoginButton onClick={signIn}>Sign in with Google</LoginButton>
       </Content>
     </Container>
   );

@@ -7,9 +7,6 @@ const categories = [
   "Baby",
   "Beauty & Personal Care",
   "Books",
-  "Computers",
-  "Electronics",
-  "Kindle Store",
 ];
 
 function Categories() {

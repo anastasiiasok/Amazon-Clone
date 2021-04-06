@@ -15,7 +15,7 @@ function CartItems({ cartItems }) {
               Important messages about items in you Cart:
             </ImportantMessage>
             <ImportantTitle>
-              Items in your Cart has changed price.
+              Returns are easy 30-day returns on millions of items
             </ImportantTitle>
             <ImportantDescription>
               Items in your Shopping Cart will always reflect the most recent
@@ -26,8 +26,9 @@ function CartItems({ cartItems }) {
                 <ImportantItemContainer>
                   <ImportantItem></ImportantItem>
                   <ImportantItemDescription>
-                    has increased from $ <RedPrice></RedPrice>
-                    <ImportantItemDescription>to</ImportantItemDescription>
+                    Get $ 150 Amazon Gift Card upon approval for the Amazon
+                    Prime Rewards Visa Card <RedPrice></RedPrice>
+                    <ImportantItemDescription></ImportantItemDescription>
                     <RedPrice></RedPrice>
                   </ImportantItemDescription>
                 </ImportantItemContainer>

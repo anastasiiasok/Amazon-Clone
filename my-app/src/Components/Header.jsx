@@ -7,7 +7,7 @@ import LocationOnIcon from "@material-ui/icons/LocationOn";
 import CartIcon from "../Assets/Images/Cart.svg";
 import BookmarksIcon from "@material-ui/icons/Bookmarks";
 
-function Header({ cartItems }) {
+function Header({ cartItems, user, signOut }) {
   const getCount = () => {
     let count = 0;
     // Loop through all cart items
@@ -20,57 +20,60 @@ function Header({ cartItems }) {
   };
 
   return (
-    <Container>
-      <HeaderLogo>
-        <Link to="/">
-          <img src={"https://i.imgur.com/7I9Was5.png"} />
-        </Link>
-      </HeaderLogo>
-
-      <HeaderOptionAddress>
-        <LocationOnIcon />
-        <HeaderOption>
-          <OptionLineOne>Hello</OptionLineOne>
-          <OptionLineTwo>Select Your Address</OptionLineTwo>
-        </HeaderOption>
-      </HeaderOptionAddress>
-      <HeaderSearch>
-        <HeaderSearchInput type="text" />
-
-        <HeaderSearchIconContainer>
-          <SearchIcon />
-        </HeaderSearchIconContainer>
-      </HeaderSearch>
-      <HeaderNavItems>
-        <HeaderOption>
-          <OptionLineOne>Hello, Anastasia</OptionLineOne>
-
-          <OptionLineTwo>Account & Lists</OptionLineTwo>
-        </HeaderOption>
-        <OptionLineOne>
-          {" "}
-          <Link to="/bookmarks">
-            <BookmarksIcon fontSize="large" />
-          </Link>{" "}
-        </OptionLineOne>
-
-        <HeaderOption>
-          <OptionLineOne>Returns</OptionLineOne>
-
-          <OptionLineTwo>& Orders</OptionLineTwo>
-        </HeaderOption>
-
-        <HeaderOptionCart>
-          <Link to="/checkout">
-            <CartIconContainer src={CartIcon} />
-
-            <CartCount>{getCount()}</CartCount>
-
-            <CartTitle>Cart</CartTitle>
+    <div className="header">
+      <div className="header__nav">
+        <HeaderLogo>
+          <Link to="/">
+            <img src={"https://i.imgur.com/7I9Was5.png"} />
           </Link>
-        </HeaderOptionCart>
-      </HeaderNavItems>
-    </Container>
+        </HeaderLogo>
+
+        <HeaderOptionAddress>
+          <LocationOnIcon />
+          <HeaderOption>
+            <OptionLineOne>Hello</OptionLineOne>
+            <OptionLineTwo>Select Your Address</OptionLineTwo>
+          </HeaderOption>
+        </HeaderOptionAddress>
+        <HeaderSearch>
+          <HeaderSearchInput type="text" />
+
+          <HeaderSearchIconContainer>
+            <SearchIcon />
+          </HeaderSearchIconContainer>
+        </HeaderSearch>
+        <HeaderNavItems>
+          <HeaderOption>
+            <OptionLineOne>Hello, {user.name}</OptionLineOne>
+
+            <OptionLineTwo>Account & Lists</OptionLineTwo>
+          </HeaderOption>
+          <OptionLineOne>
+            {" "}
+            <Link to="/bookmarks">
+              <BookmarksIcon fontSize="large" />
+            </Link>{" "}
+          </OptionLineOne>
+
+          <HeaderOption>
+            <OptionLineOne>Returns</OptionLineOne>
+
+            <OptionLineTwo>& Orders</OptionLineTwo>
+          </HeaderOption>
+
+          <HeaderOptionCart>
+            <Link to="/checkout">
+              <CartIconContainer src={CartIcon} />
+
+              <CartCount>{getCount()}</CartCount>
+
+              <CartTitle>Cart</CartTitle>
+              <Button onClick={signOut}> Sign Out</Button>
+            </Link>
+          </HeaderOptionCart>
+        </HeaderNavItems>
+      </div>
+    </div>
   );
 }
 
@@ -83,6 +86,9 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   color: white;
+  margin-top: auto;
+  flex-flow: column nowrap;
+  width: 100%;
 `;
 
 const HeaderLogo = styled.div`
@@ -174,4 +180,22 @@ const CartTitle = styled.div`
 `;
 const CartIconContainer = styled.img`
   height: 35px;
+`;
+const Button = styled.button`
+  width: 70px;
+  height: 30px;
+  margin-left: 10px;
+
+  box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+  background: #febd69;
+  background-color: #febd69;
+
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  :hover {
+    background: #f7ca00;
+    border-color: #f2c200;
+    box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+  }
 `;

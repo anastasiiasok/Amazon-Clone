@@ -74,10 +74,7 @@ function Footer() {
           ))}
         </div>
         <div className="footer__bottom">
-          <img
-            src="https://amazon-ish.vercel.app/static/media/logo.159260d8.svg"
-            className="footer__logo"
-          />
+          <img src="https://i.imgur.com/7I9Was5.png" className="footer__logo" />
           <span className="footer__copy">
             &copy; 2020 | Developed by{" "}
             <a href="https://github.com/anastasiiasok">Anastasiia Soktoeva</a>

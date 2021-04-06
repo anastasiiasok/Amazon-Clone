@@ -1,69 +1,75 @@
-/* .header {
-  height: 60px;
+.header {
+  position: relative;
+  background-color: #0F1111;
+  color: white;
+  height: 130px;
+  justify-content: space-between;
+
+}
+.header__nav {
+  padding: 3rem;
+  padding-bottom: 0;
   display: flex;
   align-items: center;
-  background-color: #131921;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  justify-content: flex-end;
 }
-
-.header__logo {
-  width: 100px;
-  object-fit: contain;
-  margin: 0 20px;
-  margin-top: 18px;
-}
-
-.header__search {
+.header__search,
+.header__back {
+  padding: 0.33rem 0.15rem 0.33rem 0.66rem;
+  background: #fff;
+  box-shadow: 0 0.25rem 0.5rem rgba(26, 26, 44, 0.05);
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  margin-right: 1rem;
   display: flex;
-  flex: 1;
   align-items: center;
-  border-radius: 24px;
+  position: relative;
 }
-
-.header__searchInput {
-  height: 12px;
-  padding: 10px;
+.header__back {
+  margin-right: auto;
+  padding: 0.33rem 0.66rem;
+  display: inline-block;
+  border: none;
+}
+.header__searchIcon {
+  opacity: 0.75;
+  transform: scale(0.95);
+}
+.header__search input {
+  background: none;
   border: none;
   width: 100%;
+  height: 100%;
+  padding: 0 0.5rem;
+}
+input:focus {
+  outline: none;
+}
+input::placeholder {
+  color: #1a1a2c;
+  opacity: 0.5;
+}
+.header__logo {
+  height: 2rem;
+  width: auto;
+  margin-left: 1rem;
 }
 
-.header__searchIcon {
-  padding: 5px;
-  height: 22px !important;
-  background-color: #cd9042;
+@media (max-width: 550px) {
+  .header__nav {
+    padding: 1.5rem;
+  }
+  .header__logo {
+    display: none;
+  }
+  .header__langDropDown {
+    display: none !important;
+  }
+  .header__search {
+    margin-right: 0;
+    width: 50%;
+  }
+  .header__back {
+    margin-right: 1rem;
+  }
 }
-
-.header__optionLineOne {
-  font-size: 10px;
-}
-
-.header__optionLineTwo {
-  font-size: 13px;
-  font-weight: 800;
-}
-
-.header__optionBasket {
-  display: flex;
-  align-items: center;
-  color: white;
-}
-
-.header__basketCount {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.header__nav {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.header__option {
-  display: flex;
-  flex-direction: column;
-  margin-left: 10px;
-  margin-right: 10px;
-  color: white;
-} */

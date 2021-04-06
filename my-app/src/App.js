@@ -7,13 +7,13 @@ import Cart from "./Components/Cart";
 import Footer from "./Components/Footer";
 
 import { useState, useEffect } from "react";
-import { db } from "./firebase";
-import Bookmarks from "./Components/Bookmarks";
+import { db, auth } from "./firebase";
 import Login from "./Components/Login";
+import styled from "styled-components";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
-
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
   const getCartItems = () => {
     db.collection("cartItems").onSnapshot((snapshot) => {
       const tempItems = snapshot.docs.map((doc) => ({
@@ -24,38 +24,42 @@ function App() {
       setCartItems(tempItems);
     });
   };
-
+  const signOut = () => {
+    auth.signOut().then(() => {
+      localStorage.removeItem("user");
+      setUser(null);
+    });
+  };
   useEffect(() => {
     getCartItems();
   }, []);
   console.log(cartItems);
 
   return (
-    <div className="App">
-      <header className="App-header"></header>
-      <Router>
-        <div className="app">
-          <Header cartItems={cartItems} />
+    <Router>
+      {!user ? (
+        <Login setUser={setUser} />
+      ) : (
+        <Container>
+          <Header signOut={signOut} user={user} cartItems={cartItems} />
 
           <Switch>
-            <Route path="/login">
-              <Login />
-            </Route>
             <Route path="/checkout">
               <Cart cartItems={cartItems} />
             </Route>
-            <Route path="/bookmarks">
-              <Bookmarks />
-            </Route>
+
             <Route path="/">
               <Home />
             </Route>
           </Switch>
-        </div>
-      </Router>
-      <Footer />
-    </div>
+          <Footer />
+        </Container>
+      )}
+    </Router>
   );
 }
 
 export default App;
+const Container = styled.div`
+  background-color: #eaeded;
+`;
