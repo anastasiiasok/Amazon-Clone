@@ -4,8 +4,8 @@ import Product from "./Product";
 import styled from "styled-components";
 import Grid from "@material-ui/core/Grid";
 import { db } from "../firebase";
-import HomeSlider from "./Homeslider";
 import Categories from "./Categories";
+import Homeslider from "./Homeslider";
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -28,23 +28,15 @@ function Home() {
 
   return (
     <Container>
-      <Banner>
-        <HomeSlider />
-      </Banner>
-
       <Content>
+        <Homeslider />
         <Categories />
         <Grid container spacing={3}>
           {products.map((data, index) => {
             return (
               <Grid key={index} item xs={index < 4 ? 6 : 4}>
                 <ProductContainer>
-                  {" "}
-                  <Product
-                    product={data.product}
-                    id={data.id}
-                    index={index}
-                  />{" "}
+                  <Product product={data.product} id={data.id} index={index} />
                 </ProductContainer>
               </Grid>
             );
@@ -62,18 +54,15 @@ const Container = styled.div`
 `;
 
 const Banner = styled.div`
-  // background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/kindle/journeys/NDRiMzY4NTIt//// NDRiMzY4NTIt-YTI0MDc5OWMt-w1500._CB659183649_.jpg");
-  min-height: 600px;
+  min-height: 550px;
   background-position: center;
-  background-size: cover;
-  z-index: 1;
+
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), #0F1111;);
 `;
 
 const Content = styled.div`
   padding-left: 10px;
   padding-right: 10px;
-  margin-top: -350px;
 `;
 const ProductContainer = styled.div`
   overflow: hidden;
