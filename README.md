@@ -1,7 +1,7 @@
 # Amazon-Clone
 
 ### LIVE!<p align="center">
-  <img width="350" height="220" src="https://logos-world.net/wp-content/uploads/2020/04/Amazon-Symbol.jpg">
+  <img width="200" height="150" src="https://logos-world.net/wp-content/uploads/2020/04/Amazon-Symbol.jpg">
 </p>
 ## https://clone-ce38b.web.app/
 
