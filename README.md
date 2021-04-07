@@ -1,6 +1,9 @@
 # Amazon-Clone
 
-## It’s a complete e-commerce web application with a payment process.
+### LIVE!<p align="center">
+  <img width="90" height="40" src="https://logos-world.net/wp-content/uploads/2020/04/Amazon-Symbol.jpg">
+</p>
+ https://clone-ce38b.web.app/
 
 ### Part 1: 
 Created components (Header, Home and Checkout), Header CSS, installed Material-UI icons and created Routes and Links.
@@ -62,14 +65,9 @@ Getting total quantity of added items to cart, installed library (react-number-f
 </p>
 
 ### Part 10:
-
 Created Login component and used Google authenticator firebase.Now, customers can login using their Google email account and also sign out. 
 
-<p align="center">
-  <img width="700" height="400" src="https://github.com/anastasiiasok/Amazon-Clone/blob/main/my-app/public/part10.png">
-</p><p align="center">
-  <img width="350" height="220" src="https://github.com/anastasiiasok/Amazon-Clone/blob/main/my-app/public/part11.png">
-</p>
+
 
 
 
