@@ -61,5 +61,15 @@ Getting total quantity of added items to cart, installed library (react-number-f
   <img width="700" height="400" src="https://github.com/anastasiiasok/Amazon-Clone/blob/main/my-app/public/part9cart.png">
 </p>
 
+### Part 10:
+
+Created Login component and used Google authenticator firebase.Now, customers can login using their Google email account and also sign out. 
+
+<p align="center">
+  <img width="350" height="220" src="https://github.com/anastasiiasok/Amazon-Clone/blob/main/my-app/public/part10.png">
+</p><p align="center">
+  <img width="700" height="400" src="https://github.com/anastasiiasok/Amazon-Clone/blob/main/my-app/public/part11.png">
+</p>
+
 
 
