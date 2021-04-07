@@ -1,9 +1,9 @@
 # Amazon-Clone
 
 ### LIVE!<p align="center">
-  <img width="200" height="150" src="https://logos-world.net/wp-content/uploads/2020/04/Amazon-Symbol.jpg">
+  <img width="90" height="40" src="https://logos-world.net/wp-content/uploads/2020/04/Amazon-Symbol.jpg">
 </p>
-## https://clone-ce38b.web.app/
+ https://clone-ce38b.web.app/
 
 ### Part 1: 
 Created components (Header, Home and Checkout), Header CSS, installed Material-UI icons and created Routes and Links.
