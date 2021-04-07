@@ -33,6 +33,7 @@ function CartItem({ id, item }) {
             <h2>{item.title}</h2>
             <DetailsContainer>
               <div>In Stock</div>
+              <SalePrice>$ {item.price}</SalePrice>
               <PrimeContainer>
                 <CheckIcon color="inherit" />
                 <Prime>
@@ -45,7 +46,7 @@ function CartItem({ id, item }) {
                 </Checkbox>
                 <GiftText>This order contains a gift</GiftText>
               </GiftContainer>
-              return (
+
               <ProductDetailsContainer>
                 <ProductDetails>details description</ProductDetails>
               </ProductDetailsContainer>
@@ -67,13 +68,9 @@ function CartItem({ id, item }) {
         </CartItemInfo>
 
         <CartItemPrice>
-          <PriceContainer>
-            <Price></Price>
-
-            <SalePrice>$ {item.price}</SalePrice>
-          </PriceContainer>
+          <PriceContainer></PriceContainer>
           <PrimeShippingContainer>
-            Free Delivery<PrimeShippingDate></PrimeShippingDate>
+            <PrimeShippingDate></PrimeShippingDate>
           </PrimeShippingContainer>
         </CartItemPrice>
       </Container>
@@ -155,16 +152,20 @@ const CartItemPrice = styled.div`
 const Price = styled.span`
   font-weight: 500;
   margin-top: 3px;
+  margin-left: 8px;
   text-decoration: line-through;
 `;
 
 const SalePrice = styled.span`
   color: red;
   font-weight: 500;
-  padding-left: 8px;
+  margin-left: 0;
 `;
 
-const PriceContainer = styled.div``;
+const PriceContainer = styled.div`
+  display: flex;
+  margin-left: -6px;
+`;
 
 const PrimeContainer = styled.div`
   display: flex;

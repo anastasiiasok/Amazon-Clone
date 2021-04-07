@@ -19,10 +19,7 @@ function CartTotal({ getTotalPrice, getCount }) {
           </PriceContainer>
         </TotalContainer>
         <GiftContainer>
-          <Checkbox>
-            <input type="checkbox" />
-          </Checkbox>
-          <GiftText>This order contains a gift</GiftText>
+          <GiftText>Price displayed with Free Delivery</GiftText>
         </GiftContainer>
         <Button>Proceed to checkout</Button>
       </Container>
@@ -53,6 +50,7 @@ const Checkbox = styled.div``;
 
 const GiftText = styled.div`
   margin-left: 8px;
+  font-size: 18px;
 `;
 
 const Title = styled.div`
@@ -71,7 +69,7 @@ const Button = styled.button`
   background: #ffd814;
   background-color: #fcd200;
   padding: 10px;
-  width: 100%;
+
   margin: 20px 0px;
   border-radius: 8px;
   border: none;

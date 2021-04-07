@@ -21,75 +21,60 @@ function Header({ cartItems, user, signOut }) {
 
   return (
     <div className="header">
-      <div className="header__nav">
-        <HeaderLogo>
-          <Link to="/">
-            <img src={"https://i.imgur.com/7I9Was5.png"} />
+      <HeaderLogo>
+        <Link to="/">
+          <img src={"https://i.imgur.com/7I9Was5.png"} />
+        </Link>
+      </HeaderLogo>
+
+      <HeaderOptionAddress>
+        <LocationOnIcon />
+        <HeaderOption>
+          <OptionLineOne>Hello</OptionLineOne>
+          <OptionLineTwo>Select Your Address</OptionLineTwo>
+        </HeaderOption>
+        <HeaderOption>
+          <OptionLineOne>Hello, {user.name}</OptionLineOne>
+
+          <OptionLineTwo>Account & Lists</OptionLineTwo>
+        </HeaderOption>
+        <HeaderOption>
+          <OptionLineOne>Returns</OptionLineOne>
+
+          <OptionLineTwo>& Orders</OptionLineTwo>
+        </HeaderOption>
+
+        <HeaderOptionCart>
+          <Link to="/checkout">
+            <CartIconContainer src={CartIcon} />
+
+            <CartCount>{getCount()}</CartCount>
+
+            <CartTitle>Cart</CartTitle>
+            <Button onClick={signOut}> Sign Out</Button>
           </Link>
-        </HeaderLogo>
+        </HeaderOptionCart>
+      </HeaderOptionAddress>
+      <HeaderSearch>
+        <HeaderSearchInput type="text" />
 
-        <HeaderOptionAddress>
-          <LocationOnIcon />
-          <HeaderOption>
-            <OptionLineOne>Hello</OptionLineOne>
-            <OptionLineTwo>Select Your Address</OptionLineTwo>
-          </HeaderOption>
-        </HeaderOptionAddress>
-        <HeaderSearch>
-          <HeaderSearchInput type="text" />
-
-          <HeaderSearchIconContainer>
-            <SearchIcon />
-          </HeaderSearchIconContainer>
-        </HeaderSearch>
-        <HeaderNavItems>
-          <HeaderOption>
-            <OptionLineOne>Hello, {user.name}</OptionLineOne>
-
-            <OptionLineTwo>Account & Lists</OptionLineTwo>
-          </HeaderOption>
-          <OptionLineOne>
-            {" "}
-            <Link to="/bookmarks">
-              <BookmarksIcon fontSize="large" />
-            </Link>{" "}
-          </OptionLineOne>
-
-          <HeaderOption>
-            <OptionLineOne>Returns</OptionLineOne>
-
-            <OptionLineTwo>& Orders</OptionLineTwo>
-          </HeaderOption>
-
-          <HeaderOptionCart>
-            <Link to="/checkout">
-              <CartIconContainer src={CartIcon} />
-
-              <CartCount>{getCount()}</CartCount>
-
-              <CartTitle>Cart</CartTitle>
-              <Button onClick={signOut}> Sign Out</Button>
-            </Link>
-          </HeaderOptionCart>
-        </HeaderNavItems>
-      </div>
+        <HeaderSearchIconContainer>
+          <SearchIcon />
+        </HeaderSearchIconContainer>
+      </HeaderSearch>
+      <HeaderNavItems>
+        <OptionLineOne>
+          {" "}
+          {/* <Link to="/bookmarks">
+            <BookmarksIcon fontSize="large" />
+          </Link> */}
+        </OptionLineOne>
+      </HeaderNavItems>
     </div>
   );
 }
 
 export default Header;
-
-const Container = styled.div`
-  height: 60px;
-  background-color: #0f1111;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: white;
-  margin-top: auto;
-  flex-flow: column nowrap;
-  width: 100%;
-`;
 
 const HeaderLogo = styled.div`
   img {
@@ -184,7 +169,7 @@ const CartIconContainer = styled.img`
 const Button = styled.button`
   width: 70px;
   height: 30px;
-  margin-left: 10px;
+  margin-left: 30px;
 
   box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
   background: #febd69;

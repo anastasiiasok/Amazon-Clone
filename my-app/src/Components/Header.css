@@ -1,9 +1,14 @@
 .header {
-  position: relative;
+  /* position: relative;
   background-color: #0F1111;
   color: white;
   height: 130px;
-  justify-content: space-between;
+  justify-content: space-between; */
+
+  overflow: hidden;
+  background-color: #0F1111;
+  padding: 20px 10px;
+  color:white;
 
 }
 .header__nav {

@@ -47,11 +47,12 @@ export default Product;
 const Container = styled.div`
   background-color: white;
   flex: 1;
-  padding: 20px;
+  padding-left: 10px;
+  height: 400px;
   margin: 10px;
   display: flex;
   z-index: 100;
-  width: 250px;
+  width: 230px;
   flex-direction: column;
 `;
 const PriceContainer = styled.div`
