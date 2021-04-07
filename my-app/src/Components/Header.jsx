@@ -35,7 +35,7 @@ function Header({ cartItems, user, signOut }) {
         </HeaderOption>
         <HeaderOption>
           <OptionLineOne>Hello, {user.name}</OptionLineOne>
-
+          <Button onClick={signOut}> Sign Out</Button>
           <OptionLineTwo>Account & Lists</OptionLineTwo>
         </HeaderOption>
         <HeaderOption>
@@ -51,7 +51,6 @@ function Header({ cartItems, user, signOut }) {
             <CartCount>{getCount()}</CartCount>
 
             <CartTitle>Cart</CartTitle>
-            <Button onClick={signOut}> Sign Out</Button>
           </Link>
         </HeaderOptionCart>
       </HeaderOptionAddress>
@@ -168,8 +167,12 @@ const CartIconContainer = styled.img`
 `;
 const Button = styled.button`
   width: 70px;
-  height: 30px;
-  margin-left: 30px;
+  height: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  // margin-left: -10px;
+  display: flex;
+  align-items: center;
 
   box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
   background: #febd69;

@@ -45,14 +45,26 @@ function Product({ product, id }) {
 export default Product;
 
 const Container = styled.div`
+  // *,
+  // *::before,
+  // *::after {
+  //   box-sizing: border-box;
+  //   margin: 0;
+  //   padding: 0;
+  // }
+  // display: block;
+  // width: 100%;
+  // max-width: 1100px;
+  // margin: 0 auto;
+  // padding: 0 10px;
+
   background-color: white;
-  flex: 1;
-  padding-left: 10px;
-  height: 400px;
-  margin: 10px;
-  display: flex;
   z-index: 100;
-  width: 230px;
+  flex: 1;
+  padding: 20px;
+  margin: 10px;
+  max-height: 400px;
+  display: flex;
   flex-direction: column;
 `;
 const PriceContainer = styled.div`
@@ -69,13 +81,10 @@ const Price = styled.span`
   font-weight: 600;
   margin-top: 3px;
 `;
-const SalesPrice = styled.span`
-  font-weight: 500;
-  margin-top: 3px;
-`;
+
 const Rating = styled.div``;
 const Image = styled.img`
-  max-height: 200px;
+  max-height: 140px;
   object-fit: contain;
 `;
 const ProductDetailsContainer = styled.div`
