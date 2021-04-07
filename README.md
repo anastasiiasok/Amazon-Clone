@@ -1,6 +1,7 @@
 # Amazon-Clone
 
-### https://clone-ce38b.web.app/
+### LIVE 
+## https://clone-ce38b.web.app/
 
 ## It’s a complete e-commerce web application with a payment process.
 
