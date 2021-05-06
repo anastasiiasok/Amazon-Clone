@@ -10,9 +10,18 @@ import { useState, useEffect } from "react";
 import { db, auth } from "./firebase";
 import Login from "./Components/Login";
 import styled from "styled-components";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
 
+import Payment from "./Components/Payment";
+
+const promise = loadStripe(
+  "pk_test_51IdfomE4vAC1bXa5yVQMvteigw4ALaz8FZaZHPMGoXi1tyaW6caanBTJCIjw96OB1ZJzCI1V2EgN1A4K5hTvBjvI00svVDRDd"
+);
 function App() {
   const [cartItems, setCartItems] = useState([]);
+  // regular signin
+
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
   const getCartItems = () => {
     db.collection("cartItems").onSnapshot((snapshot) => {
@@ -30,6 +39,7 @@ function App() {
       setUser(null);
     });
   };
+
   useEffect(() => {
     getCartItems();
   }, []);
@@ -44,15 +54,19 @@ function App() {
           <Header signOut={signOut} user={user} cartItems={cartItems} />
 
           <Switch>
+            <Route path="/payment">
+              <Payment />
+            </Route>
             <Route path="/checkout">
               <Cart cartItems={cartItems} />
+              <Elements stripe={promise}></Elements>
             </Route>
-
             <Route path="/">
               <Home />
             </Route>
           </Switch>
-          <Footer />
+
+          {/* <Footer /> */}
         </Container>
       )}
     </Router>

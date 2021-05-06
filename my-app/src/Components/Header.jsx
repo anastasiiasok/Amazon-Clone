@@ -34,7 +34,8 @@ function Header({ cartItems, user, signOut }) {
           <OptionLineTwo>Select Your Address</OptionLineTwo>
         </HeaderOption>
         <HeaderOption>
-          <OptionLineOne>Hello, {user.name}</OptionLineOne>
+          <OptionLineOne>Hello,{user.name}</OptionLineOne>
+
           <Button onClick={signOut}> Sign Out</Button>
           <OptionLineTwo>Account & Lists</OptionLineTwo>
         </HeaderOption>
@@ -62,12 +63,7 @@ function Header({ cartItems, user, signOut }) {
         </HeaderSearchIconContainer>
       </HeaderSearch>
       <HeaderNavItems>
-        <OptionLineOne>
-          {" "}
-          {/* <Link to="/bookmarks">
-            <BookmarksIcon fontSize="large" />
-          </Link> */}
-        </OptionLineOne>
+        <OptionLineOne></OptionLineOne>
       </HeaderNavItems>
     </div>
   );
@@ -166,7 +162,7 @@ const CartIconContainer = styled.img`
   height: 35px;
 `;
 const Button = styled.button`
-  width: 70px;
+  width: 80px;
   height: 20px;
   margin-top: 5px;
   margin-bottom: 5px;

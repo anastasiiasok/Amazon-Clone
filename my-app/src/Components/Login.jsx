@@ -1,10 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import "./Login.css";
 import styled from "styled-components";
 import { auth, provider } from "../firebase";
-function Login({ setUser }) {
+
+function Login({ setUser, signInUser }) {
+  const history = useHistory();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const signIn = () => {
     auth
       .signInWithPopup(provider)
+      .then((result) => {
+        let user = result.user;
+        let newUser = {
+          name: user.displayName,
+          email: user.email,
+          photo: user.photoURL,
+        };
+        localStorage.setItem("user", JSON.stringify(newUser));
+        setUser(newUser);
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
+
+  const register = () => {
+    auth
+      .createUserWithEmailAndPassword(email, password)
       .then((result) => {
         let user = result.user;
         let newUser = {
@@ -26,6 +50,7 @@ function Login({ setUser }) {
         <h1>Sign into Amazon</h1>
         <LoginButton onClick={signIn}>Sign in with Google</LoginButton>
       </Content>
+      <p>By signing-in you agree to the AMAZON FAKE CLONE Conditions of Use.</p>
     </Container>
   );
 }

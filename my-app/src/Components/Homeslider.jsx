@@ -9,13 +9,7 @@ import slideThree from "../Assets/Images/slide3.jpg";
 import slideFour from "../Assets/Images/slide4.jpg";
 import slideFive from "../Assets/Images/slide5.jpg";
 import slideSix from "../Assets/Images/slide6.jpg";
-// // React-Slick
-// import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
 
-// // Data
-// import { homeSliderImages } from "../Components/Data/homeslider";
 const carouselImages = [
   slideOne,
   slideTwo,

@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import NumberFormat from "react-number-format";
+import { useHistory } from "react-router";
+
 function CartTotal({ getTotalPrice, getCount }) {
+  const history = useHistory();
   return (
     <div>
       <Container>
@@ -21,7 +24,10 @@ function CartTotal({ getTotalPrice, getCount }) {
         <GiftContainer>
           <GiftText>Price displayed with Free Delivery</GiftText>
         </GiftContainer>
-        <Button>Proceed to checkout</Button>
+
+        <Button onClick={(e) => history.push("/payment")}>
+          Proceed to checkout
+        </Button>
       </Container>
     </div>
   );

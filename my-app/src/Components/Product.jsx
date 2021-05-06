@@ -45,19 +45,6 @@ function Product({ product, id }) {
 export default Product;
 
 const Container = styled.div`
-  // *,
-  // *::before,
-  // *::after {
-  //   box-sizing: border-box;
-  //   margin: 0;
-  //   padding: 0;
-  // }
-  // display: block;
-  // width: 100%;
-  // max-width: 1100px;
-  // margin: 0 auto;
-  // padding: 0 10px;
-
   background-color: white;
   z-index: 100;
   flex: 1;
@@ -96,13 +83,6 @@ const ActionSection = styled.div`
   place-items: center;
 `;
 
-const AddToCartButton = styled.button`
-  width: 100px;
-  height: 30px;
-  background-color: #f0c14b;
-  border: 2px solid #a88734;
-  border-radius: 2px;
-`;
 const Button = styled.button`
   width: 100px;
   height: 30px;
